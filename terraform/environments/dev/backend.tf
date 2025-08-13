@@ -1,10 +1,11 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "tfstate-rg"      
-    storage_account_name = "tfstatestorageacct11"      
-    container_name       = "tfstate"                 
+    resource_group_name  = "asha"      
+    storage_account_name = "ashaaa"      
+    container_name       = "ashaaaa"                 
     key                  = "loadbalancer.tfstate"  
   }
 }
+
 
 
