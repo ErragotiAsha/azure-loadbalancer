@@ -14,12 +14,14 @@ resource "azurerm_lb" "Loadbalancer" {
   name                = var.load_balancer_name
   location            = azurerm_resource_group.LBResource.location
   resource_group_name = azurerm_resource_group.LBResource.name
+  sku = var.public_ip_sku
   
 
   frontend_ip_configuration {
     name                 = var.frontend_ip_configuration_name
     public_ip_address_id = azurerm_public_ip.LBpublicip.id
-    sku = var.public_ip_sku 
+     
   }
 
 }
+
